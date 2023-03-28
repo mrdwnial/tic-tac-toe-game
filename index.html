@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/image/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://kit.fontawesome.com/e8f8c3875f.js" crossorigin="anonymous"></script>
+
+    <title>Tic Tak Toe</title>
+</head>
+
+<body>
+    <div id="spin">
+        <span class="spinner"></span>
+    </div>
+    <div class="notification-Box animate__backInDown">
+        <div class="notification ">
+            <span class="notification-text"></span>
+        </div>
+        <i class="fa-solid fa-xmark delIcon animate__slideInDown"></i>
+    </div>
+    <main>
+        <div class="wecome-text">
+            <span class="animate__slideInDown">
+                <h1>Welcome</h1>
+                <h1>خوش آمدید</h1>
+            </span>
+        </div>
+        <div class="menu animate__bounceIn">
+            <div class="users-name animate__jackInTheBox">
+                <span class="get-user-name-title">: نام بازیکنان را وارد نمایید</span>
+                <div class="get-users-name">
+                    <input type="text" placeholder="... بازیکن اول" autoComplete="off" id="firstPlayer-name">
+                    <input type="text" placeholder="... بازیکن دوم" autoComplete="off" id="secondPlayer-name">
+                    <button id="twoPlayerNameBTN">ثبت</button>
+                </div>
+            </div>
+            <div class="game-sets animate__flipInX">
+                <span class="game-set-title">: تعداد دور</span>
+
+                <form class="round-number">
+                    <label for="1">1</label>
+                    <input type="radio" id="one-round" name="select-round" value="1">
+
+                    <label for="3">3</label>
+                    <input type="radio" id="three-round" name="select-round" value="3">
+
+                    <label for="5">5</label>
+                    <input type="radio" id="five-round" name="select-round" value="5">
+
+                    <label for="7">7</label>
+                    <input type="radio" id="seven-round" name="select-round" value="7">
+                </form>
+                <button id="gameSetBTN">ثبت</button>
+            </div>
+            <div class="selectColor animate__flipInX">
+                <label class="title">! رنگ خودتو انتخاب کن</label>
+                <div>
+                    <section class="player-one">
+                        <label for="player-one">بازیکن اول</label>
+                        <span class="blueColor"></span>
+                    </section>
+                    <section class="switch-and-button">
+                        <i class="fa-solid fa-repeat changer"></i>
+                        <button class="selectColorBTN">! بزن بریم</button>
+                    </section>
+                    <section class="player-two">
+                        <label for="player-two">بازیکن دوم</label>
+                        <span class="redColor"></span>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="show-set-number animate__fadeInDown">
+            <span class="show-set-number-content">
+                <p class="set-number-text"></p>
+                <p class="set-text">: دور</p>
+            </span>
+        </div>
+        <div class="name-and-points animate__fadeInDown">
+            <span class="first-user">
+                <div>
+                    <p id="win-set-left">0</p>
+                    <p id="first-player-name">شما</p>
+                </div>
+                <i class="fa-solid fa-hand-point-up LeftTurn animate__bounceIn"></i>
+            </span>
+            <span class="second-user">
+                <div>
+                    <p id="win-set-right">0</p>
+                    <p id="Second-player-name">ربات</p>
+                </div>
+                <i class="fa-solid fa-hand-point-up rightTurn animate__bounceIn"></i>
+            </span>
+        </div>
+        <div class="main-game animate__jackInTheBox">
+            <div class="top">
+                <span id="box1" class="box empty"></span>
+                <span id="box2" class="box empty"></span>
+                <span id="box3" class="box empty"></span>
+            </div>
+            <div class="middle">
+                <span id="box4" class="box empty"></span>
+                <span id="box5" class="box empty"></span>
+                <span id="box6" class="box empty"></span>
+            </div>
+            <div class="bottom">
+                <span id="box7" class="box empty"></span>
+                <span id="box8" class="box empty"></span>
+                <span id="box9" class="box empty"></span>
+            </div>
+        </div>
+        <div class="end-page">
+            <div class="end-box animate__bounceIn">
+                <i class="fa-solid fa-trophy cup-icon"></i>
+                <h1 class="victory-text animate__zoomIn">برنده بازی</h1>
+                <span class="winner-box animate__zoomIn">
+                    <p class="winner-player"></p>
+                    <i class="fa-solid fa-circle-user user-icon"></i>
+                </span>
+            </div>
+        </div>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
